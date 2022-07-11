@@ -21,6 +21,11 @@ export default new Router({
       path: '/excel2',
       name: 'excel2',
       component: () => import('@/components/Excel2')
+    },
+    {
+      path: '/lesMiserables',
+      name: 'lesMiserables',
+      component: () => import('@/echarts/lesMiserables')
     }
   ]
 })

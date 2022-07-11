@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="overflow: hidden;">
     <!--<img src="./assets/logo.png">-->
     <router-view/>
   </div>
@@ -19,5 +19,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  /*width: 1000px;*/
+  /*height: 1000px*/
 }
 </style>
