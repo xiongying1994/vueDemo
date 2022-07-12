@@ -7,7 +7,6 @@
 
 <script>
   import api from './api.js'
-  import dataJs from './data.js'
   export default {
         name: "lesMiserables",
       data () {
@@ -20,15 +19,11 @@
       },
       methods: {
         getEchartsData () {
-          this.echartsData = this.getEchartsData()
+          this.echartsData = api.getData(2)
           this.$nextTick(() => {
             // api.echartsPaint(document.getElementById('echarts'), this.echartsData)
             api.echartsPaint(this.$refs.echarts, this.echartsData)
           })
-        },
-        getEchartsData : () => {
-          let data = dataJs.handleEchartsData(dataJs.echartsData2)
-          return data
         }
       }
     }
@@ -40,7 +35,7 @@
     /*padding: 5px;*/
     margin: auto;
     border: 2px solid rebeccapurple;
-    width: 100%;
+    width: 1000px;
     height: 1000px;
   }
 
