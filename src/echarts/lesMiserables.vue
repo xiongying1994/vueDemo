@@ -19,7 +19,7 @@
       },
       methods: {
         getEchartsData () {
-          this.echartsData = api.getData(2)
+          this.echartsData = api.getData(3)
           this.$nextTick(() => {
             // api.echartsPaint(document.getElementById('echarts'), this.echartsData)
             api.echartsPaint(this.$refs.echarts, this.echartsData)
@@ -35,8 +35,8 @@
     /*padding: 5px;*/
     margin: auto;
     border: 2px solid rebeccapurple;
-    width: 1000px;
-    height: 1000px;
+    width: 1500px;
+    height: 1500px;
   }
 
 </style>

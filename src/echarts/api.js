@@ -2164,6 +2164,372 @@ let echartsData2 = {
     }
   ]
 }
+let echartsData3 = {
+  "nodes": [
+    {
+      "id": 0,
+      "name": "上传集团",
+      "value": 141,
+      "timeOut": 1185,
+      "category": 0
+    },
+    {
+      "id": 1,
+      "name": "订单保存",
+      "value": 0,
+      "timeOut": 0,
+      "category": 0
+    },
+    {
+      "id": 2,
+      "name": "订单缴费（手机）",
+      "value": 0,
+      "timeOut": 16,
+      "category": 0
+    },
+    {
+      "id": 3,
+      "name": "订单缴费（新）",
+      "value": 0,
+      "timeOut": 0,
+      "category": 0
+    },
+    {
+      "id": 4,
+      "name": "订单拆分",
+      "value": 29,
+      "timeOut": 67,
+      "category": 0
+    },
+    {
+      "id": 5,
+      "name": "送开通队列",
+      "value": 0,
+      "timeOut": 0,
+      "category": 0
+    },
+    {
+      "id": 6,
+      "name": "订单开通",
+      "value": 84,
+      "timeOut": 181,
+      "category": 0
+    },
+    {
+      "id": 7,
+      "name": "开通回单",
+      "value": 0,
+      "timeOut": 3,
+      "category": 0
+    },
+    {
+      "id": 8,
+      "name": "订单竣工",
+      "value": 0,
+      "timeOut": 8632,
+      "category": 0
+    },
+    {
+      "id": 9,
+      "name": "短信发送",
+      "value": 0,
+      "timeOut": 0,
+      "category": 0
+    },
+    {
+      "id": 10,
+      "name": "APC推送_提速",
+      "value": 0,
+      "timeOut": 0,
+      "category": 0
+    },
+    {
+      "id": 11,
+      "name": "APC推送_复开",
+      "value": 0,
+      "timeOut": 0,
+      "category": 0
+    },
+    {
+      "id": 12,
+      "name": "PCF推送_新装",
+      "value": 2,
+      "timeOut": 14,
+      "category": 0
+    },
+    {
+      "id": 13,
+      "name": "PCF推送_退订",
+      "value": 0,
+      "timeOut": 0,
+      "category": 0
+    }
+  ],
+  "links": [
+    {
+      "source": "1",
+      "target": "0",
+    },
+    {
+      "source": "1",
+      "target": "2",
+    },
+    {
+      "source": "0",
+      "target": "2",
+    },
+    {
+      "source": "2",
+      "target": "3",
+    },
+    {
+      "source": "2",
+      "target": "4",
+    },
+    {
+      "source": "1",
+      "target": "3",
+    },
+    {
+      "source": "3",
+      "target": "4",
+    },
+    {
+      "value": 16803,
+      "error": 0,
+      "source": "4",
+      "target": "5",
+    },
+    {
+      "value": 38237,
+      "error": 84,
+      "source": "5",
+      "target": "6",
+    },
+    {
+      "source": "5",
+      "target": "7",
+    },
+    {
+      "source": "4",
+      "target": "8",
+    },
+    {
+      "source": "7",
+      "target": "8",
+    },
+    {
+      "source": "8",
+      "target": "9",
+    },
+    {
+      "source": "8",
+      "target": "10",
+    },
+    {
+      "source": "10",
+      "target": "11",
+    },
+    {
+      "source": "8",
+      "target": "12",
+    },
+    {
+      "source": "8",
+      "target": "13",
+    }
+  ],
+  "categories":[
+    {
+      "name": "计费基础"
+    }
+  ]
+}
+
+let echartsData4 = {
+  "nodes": [
+    {
+      "id": 0,
+      "name": "上传集团aaa",
+      "value": 141,
+      "timeOut": 1185,
+      "category": 0
+    },
+    {
+      "id": 1,
+      "name": "订单保存aaa",
+      "value": 0,
+      "timeOut": 0,
+      "category": 0
+    },
+    {
+      "id": 2,
+      "name": "订单缴费（手机）",
+      "value": 0,
+      "timeOut": 16,
+      "category": 0
+    },
+    {
+      "id": 3,
+      "name": "订单缴费（新）",
+      "value": 0,
+      "timeOut": 0,
+      "category": 0
+    },
+    {
+      "id": 4,
+      "name": "订单拆分",
+      "value": 29,
+      "timeOut": 67,
+      "category": 0
+    },
+    {
+      "id": 5,
+      "name": "送开通队列",
+      "value": 0,
+      "timeOut": 0,
+      "category": 0
+    },
+    {
+      "id": 6,
+      "name": "订单开通",
+      "value": 84,
+      "timeOut": 181,
+      "category": 0
+    },
+    {
+      "id": 7,
+      "name": "开通回单",
+      "value": 0,
+      "timeOut": 3,
+      "category": 0
+    },
+    {
+      "id": 8,
+      "name": "订单竣工",
+      "value": 0,
+      "timeOut": 8632,
+      "category": 0
+    },
+    {
+      "id": 9,
+      "name": "短信发送",
+      "value": 0,
+      "timeOut": 0,
+      "category": 0
+    },
+    {
+      "id": 10,
+      "name": "APC推送_提速",
+      "value": 0,
+      "timeOut": 0,
+      "category": 1
+    },
+    {
+      "id": 11,
+      "name": "APC推送_复开",
+      "value": 0,
+      "timeOut": 0,
+      "category": 1
+    },
+    {
+      "id": 12,
+      "name": "PCF推送_新装",
+      "value": 2,
+      "timeOut": 14,
+      "category": 1
+    },
+    {
+      "id": 13,
+      "name": "PCF推送_退订",
+      "value": 0,
+      "timeOut": 0,
+      "category": 1
+    }
+  ],
+  "links": [
+    {
+      "source": "1",
+      "target": "0",
+    },
+    {
+      "source": "1",
+      "target": "2",
+    },
+    {
+      "source": "0",
+      "target": "2",
+    },
+    {
+      "source": "2",
+      "target": "3",
+    },
+    {
+      "source": "2",
+      "target": "4",
+    },
+    {
+      "source": "1",
+      "target": "3",
+    },
+    {
+      "source": "3",
+      "target": "4",
+    },
+    {
+      "value": 16803,
+      "error": 0,
+      "source": "4",
+      "target": "5",
+    },
+    {
+      "value": 38237,
+      "error": 84,
+      "source": "5",
+      "target": "6",
+    },
+    {
+      "source": "5",
+      "target": "7",
+    },
+    {
+      "source": "4",
+      "target": "8",
+    },
+    {
+      "source": "7",
+      "target": "8",
+    },
+    {
+      "source": "8",
+      "target": "9",
+    },
+    {
+      "source": "8",
+      "target": "10",
+    },
+    {
+      "source": "10",
+      "target": "11",
+    },
+    {
+      "source": "8",
+      "target": "12",
+    },
+    {
+      "source": "8",
+      "target": "13",
+    }
+  ],
+  "categories":[
+    {
+      "name": "计费基础"
+    },
+    {
+      "name": "推送"
+    }
+  ]
+}
 
 export default {
   echartsPaint(dom, graph) {
@@ -2171,7 +2537,10 @@ export default {
     var myChart = echarts.init(dom)
     myChart.setOption(
       {
+        // 提示组件
         tooltip: {},
+
+        // 图例   --- 组
         legend: [
           {
             data: graph.categories.map(function (a) {
@@ -2179,6 +2548,17 @@ export default {
             })
           }
         ],
+        // // x轴
+        // xAxis: {
+        //   type: 'value',
+        //   boundaryGap: false,
+        //   show: false
+        // },
+        // // y轴
+        // yAxis: {
+        //   type: 'value',
+        //   show: false
+        // },
         series: [
           {
             name: 'Les Miserables',
@@ -2192,72 +2572,100 @@ export default {
             // 节点组
             categories: graph.categories,
             // // 节点大小    ---- 在数据中也可直接设置
-            symbolSize: [40, 20],
+            symbolSize: 30,
             // 节点形状  'circle' 圆形 , 'rect' 正方形, 'roundRect' 圆角方形
-            symbol: "roundRect",
+            symbol: "circle",
             // 是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启
             roam: true,
             // 箭头属性 ‘circle’(圆形), ‘rect’（矩形）, ‘roundRect’（圆角矩形）, ‘triangle’（三角形）, ‘diamond’（菱形）, ‘pin’（大头针）, ‘arrow’（箭头）‘none’ （无）
             edgeSymbol: ['none', 'arrow'],
             // 箭头 宽  高
-            edgeSymbolSize: [20, 10],
+            edgeSymbolSize: [30, 15],
             // 节点焦点显示
             label: {
               // 是否显示标签
               show: true,
               // 标签位置
               position: 'inside',
+              offset: [0, 30],
+              color: "black",
+
               // 文本规范
-              formatter: '{b}'
+              formatter: param => {
+                // 超出省略
+                let params = param.data.value;
+                let maxlength = 3;
+                if (params.length > maxlength) {
+                  params = params.substring(0, maxlength - 1) + '...';
+                }
+                return 'Error: ' + params + '\n\n\n\n' + param.data.name + '\n' + 'TimeOut: ' + param.data.timeOut
+              }
             },
+            // 线条显示
             edgeLabel: {
               normal: {
+                // isShow: function (param) {
+                //   return param.data.value !== undefined
+                // },
                 show: true,
+                // 居中 斜体
+                position: 'middle',
+                fontStyle: "italic",
                 formatter: param => {
-                  var newLinks = this.getData(2).links
-                  var newParam = param
-                  var newName = ''
+                  var newLinks = this.getData(3).links
+                  var value = ''
+                  var error = ''
 
                   newLinks.forEach(item => {
                     //links中筛选与当前的source和target相等的返回其name
-                    if (item.source === newParam.data.source && item.target === newParam.data.target) {
-                      newName = item.name
+                    if (param.data.value !== undefined && item.source === param.data.source && item.target === param.data.target) {
+                      value = item.value
+                      error = item.error
                     }
-
                   })
-                  return newName
+                  if (value !== '') {
+                    return '总量：' + value + '\n' + '异常：'+ error
+                  } else {
+                    return ''
+                  }
+
                 },
+                backgroundColor: "black",
+                // lineHeight: 50,
+                borderRadius: [10, 10, 10, 10],
+                padding: [5, 5, 5, 5],
                 textStyle: {
-                  color: 'green'
+                  color: 'white'
                 }
               }
             },
-            // itemStyle: {
-            //   normal: {
-            //     color: function (params) {
-            //       if (params.dataIndex > 20) {
-            //         return 'red'
-            //       } else {
-            //         return 'blue'
-            //       }
-            //     }
-            //   }
-            // },
+            itemStyle: {
+              color: "white",
+              borderColor: "black",
+              borderWidth: 1,
+            },
             scaleLimit: {
-              min: 0.4,
-              max: 4
+              min: 4,
+              max: 10
             },
             lineStyle: {
-              color: 'source',
+              color: 'grey',
               width: 2,
               length: 200,
               // 连接线曲度
-              curveness: 0
+              curveness: 0,
+              // 蚂蚁线 -- 流水线  echarts 5
+              dashOffset: 5,
+              type: [5, 10]
             },
-            // 力引导图 引力
+            // 力引导图
             force: {
-              // li
-              repulsion: 20
+              // 初始化布局
+              // initLayout: 'none',
+              // 斥力
+              repulsion: 150,
+              // 引力
+              // gravity: 1
             },
             // 节点高亮  echarts 5 版本，测试版本为4，不生效
             emphasis: {
@@ -2269,7 +2677,35 @@ export default {
               // 'adjacency' 聚焦关系图中的邻接点和边的图形
               focus: 'adjacency'
             }
-          }
+          },
+          // {//关系
+          //   type: 'lines',
+          //   // symbol: ['none', 'none'],
+          //   // symbolSize: ['none', 22],
+          //   coordinateSystem: 'cartesian2d',
+          //   label: {
+          //     show: true,
+          //     position: 'middle'
+          //   },
+          //   lineStyle: {
+          //     normal: {
+          //       color: '#777777',
+          //       width: 1,
+          //       type: 'dashed',
+          //       opacity: 1,
+          //       curveness: 0
+          //       //curveness: -0.1
+          //     }
+          //   },
+          //   effect: {
+          //     show: true,//是否 运动
+          //     trailLength: .1,
+          //     symbol: "image://https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585824156011&di=a8c5a0a2ab7d10f2b812f0443f881d1b&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F97%2F79%2F0456f32aca5d2d2.jpg",
+          //     color: '#777777',
+          //     symbolSize: 22
+          //   },
+          //   data: graph.links
+          // }
         ]
       })
     // echarts图位置大小适应全局
@@ -2280,57 +2716,63 @@ export default {
     let doms = this
     // 节点点击事件
     myChart.on('click', function (params) {
-      var option = myChart.getOption();
-
       if (params.dataType === 'node') {
-        let paramData = doms.getData(1)
+        let paramData = doms.getData(4)
         // 点击节点
-        option.series[0].data = paramData.node
-        option.series[0].links = paramData.links
-        option.series[0].categories = paramData.categories
+        doms.echartsPaint(dom, paramData)
       } else if (params.dataType === 'edge') {   // 点击连接线
 
       }
-      myChart.setOption(option, true);
     })
   },
 
+
+  /**
+   * 数据获取方式   在link显示的format中，也有需要获取的地方，点击事件还有获取数据进行切换，这两处需要注意替换
+   * @param data
+   * @returns {*}
+   */
   getData(data) {
     if (data === 1) {
       return this.getEchartsData(echartsData)
     } else if (data === 2) {
       return this.getEchartsData(echartsData2)
+    } else if (data === 3) {
+      return echartsData3
+    } else if (data === 4) {
+      return echartsData4
     }
   },
 
   getEchartsData(data) {
-    // let data = echartsData2
+    // 距离因子
+    let factor = 50
     // ID
     let idNum = 0
     // 区域
     let categoryNum = 0
     // 起始位置
-    let categoryX = 100
-    let categoryY = 100
-    let categoryYMax = 200
-    let categoryXBase = 100
+    let categoryX = factor
+    let categoryY = factor
+    let categoryYMax = 0
+    let categoryXBase = factor
     let categoryYTime = 0
     let xMax = 0
     let yMax = 0
     data.nodes.forEach((ele, index) => {
-      ele.id = idNum++
+      // ele.id = idNum++
       if (index < 1) {
         categoryNum = ele.category
         xMax = xMax + 1
       } else if (categoryNum === ele.category) {
         // 同一个区域
         if (xMax < 4) {
-          categoryX = categoryX + 100
+          categoryX = categoryX + factor
           xMax = xMax + 1
         } else {
           // 每行四个，换行
-          categoryY = categoryY + 100
-          categoryX = categoryX - 300
+          categoryY = categoryY + factor
+          categoryX = categoryX - (factor * 3)
           xMax = 1
           // 记录换行次数
           categoryYTime++
@@ -2344,8 +2786,8 @@ export default {
           categoryYMax = categoryY
         }
         // 回归同行X,Y轴
-        categoryY = categoryY - (100 * categoryYTime)
-        categoryXBase = categoryXBase + 400
+        categoryY = categoryY - (factor * categoryYTime)
+        categoryXBase = categoryXBase + (factor * 4)
         categoryX = categoryXBase
 
         xMax = 1
@@ -2354,8 +2796,8 @@ export default {
       } else {
         // 一行超过三个区域，换行画区域
         categoryNum = ele.category
-        categoryX = 100
-        categoryY = categoryYMax + 100
+        categoryX = factor
+        categoryY = categoryYMax + factor
 
         xMax = 1
         yMax = 0
@@ -2365,6 +2807,7 @@ export default {
       ele.x = categoryX
       ele.y = categoryY
     })
+    console.log('内容', data)
     return data
   }
 }
