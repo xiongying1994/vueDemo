@@ -36,7 +36,7 @@
     margin: auto;
     border: 2px solid rebeccapurple;
     width: 1500px;
-    height: 1500px;
+    height: 1000px;
   }
 
 </style>

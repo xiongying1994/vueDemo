@@ -2339,11 +2339,11 @@ let echartsData3 = {
       "target": "13",
     }
   ],
-  "categories":[
-    {
-      "name": "计费基础"
-    }
-  ]
+  // "categories":[
+  //   {
+  //     "name": "计费基础"
+  //   }
+  // ]
 }
 
 let echartsData4 = {
@@ -2521,12 +2521,39 @@ let echartsData4 = {
       "target": "13",
     }
   ],
-  "categories":[
+  // "categories":[
+  //   {
+  //     "name": "计费基础"
+  //   },
+  //   {
+  //     "name": "推送"
+  //   }
+  // ]
+}
+
+let echartsData5 = {
+  "nodes": [
     {
-      "name": "计费基础"
+      "id": 0,
+      "name": "上传集团bbb",
+      "value": 141,
+      "timeOut": 1185,
+      "category": 0
     },
     {
-      "name": "推送"
+      "id": 1,
+      "name": "订单保存bbb",
+      "value": 0,
+      "timeOut": 0,
+      "category": 0
+    }
+  ],
+  "links": [
+    {
+      "value": 16803,
+      "error": 0,
+      "source": "1",
+      "target": "0",
     }
   ]
 }
@@ -2537,17 +2564,23 @@ export default {
     var myChart = echarts.init(dom)
     myChart.setOption(
       {
+        title: {
+          text: '基础运营中心画布',
+          subtext: 'Default layout',
+          top: 'bottom',
+          left: 'right'
+        },
         // 提示组件
         tooltip: {},
 
-        // 图例   --- 组
-        legend: [
-          {
-            data: graph.categories.map(function (a) {
-              return a.name;
-            })
-          }
-        ],
+        // // 图例   --- 组（不需要）
+        // legend: [
+        //   {
+        //     data: graph.categories.map(function (a) {
+        //       return a.name;
+        //     })
+        //   }
+        // ],
         // // x轴
         // xAxis: {
         //   type: 'value',
@@ -2561,7 +2594,7 @@ export default {
         // },
         series: [
           {
-            name: 'Les Miserables',
+            name: '节点信息：',
             type: 'graph',
             // 图的布局 'none' 不采用任何布局，使用节点中提供的 x， y 作为节点的位置，'circular' 采用环形布局;'force' 采用力引导布局.
             layout: 'force',
@@ -2569,8 +2602,8 @@ export default {
             data: graph.nodes,
             // 节点关系
             links: graph.links,
-            // 节点组
-            categories: graph.categories,
+            // 节点组  -- 不需要
+            // categories: graph.categories,
             // // 节点大小    ---- 在数据中也可直接设置
             symbolSize: 30,
             // 节点形状  'circle' 圆形 , 'rect' 正方形, 'roundRect' 圆角方形
@@ -2612,26 +2645,19 @@ export default {
                 position: 'middle',
                 fontStyle: "italic",
                 formatter: param => {
-                  var newLinks = this.getData(3).links
                   var value = ''
                   var error = ''
-
-                  newLinks.forEach(item => {
-                    //links中筛选与当前的source和target相等的返回其name
-                    if (param.data.value !== undefined && item.source === param.data.source && item.target === param.data.target) {
-                      value = item.value
-                      error = item.error
-                    }
-                  })
-                  if (value !== '') {
-                    return '总量：' + value + '\n' + '异常：'+ error
+                  if (param.data.value !== undefined) {
+                    value = param.data.value
+                    error = param.data.error
+                    return '总量：' + value + '\n' + '异常：' + error
                   } else {
                     return ''
                   }
-
                 },
-                backgroundColor: "black",
-                // lineHeight: 50,
+                backgroundColor: "#000000",
+                // 字体粗细
+                fontWeight: "bolder",
                 borderRadius: [10, 10, 10, 10],
                 padding: [5, 5, 5, 5],
                 textStyle: {
@@ -2640,9 +2666,17 @@ export default {
               }
             },
             itemStyle: {
-              color: "white",
-              borderColor: "black",
-              borderWidth: 1,
+              normal: {
+                color: params => {
+                  if (params.data.timeOut > 0) {
+                    return "#feb9ca"
+                  } else {
+                    return "#9afecb"
+                  }
+                },
+                borderColor: "black",
+                borderWidth: 1
+              }
             },
             scaleLimit: {
               min: 4,
@@ -2655,7 +2689,7 @@ export default {
               // 连接线曲度
               curveness: 0,
               // 蚂蚁线 -- 流水线  echarts 5
-              dashOffset: 5,
+              // dashOffset: 5,
               type: [5, 10]
             },
             // 力引导图
@@ -2663,9 +2697,10 @@ export default {
               // 初始化布局
               // initLayout: 'none',
               // 斥力
-              repulsion: 150,
+              repulsion: 100,
               // 引力
               // gravity: 1
+              edgeLength: 80
             },
             // 节点高亮  echarts 5 版本，测试版本为4，不生效
             emphasis: {
@@ -2678,7 +2713,7 @@ export default {
               focus: 'adjacency'
             }
           },
-          // {//关系
+          // {//关系   力引导图无法设置动态关系线，lines不能指定x,y位置
           //   type: 'lines',
           //   // symbol: ['none', 'none'],
           //   // symbolSize: ['none', 22],
@@ -2712,18 +2747,39 @@ export default {
     window.addEventListener('resize', function () {
       myChart.resize()
     })
-
     let doms = this
     // 节点点击事件
     myChart.on('click', function (params) {
       if (params.dataType === 'node') {
-        let paramData = doms.getData(4)
-        // 点击节点
-        doms.echartsPaint(dom, paramData)
+        if (params.data.id === 1) {
+          window.open('https://www.baidu.com/')
+        } else if (params.data.id <= 5) {
+          let paramData = doms.getData(3)
+          // 点击节点
+          doms.echartsPaint(dom, paramData)
+        } else if (params.data.id <= 10) {
+          let paramData = doms.getData(4)
+          // 点击节点
+          doms.echartsPaint(dom, paramData)
+        } else if (params.data.id > 10) {
+          let paramData = doms.getData(5)
+          // 点击节点
+          doms.echartsPaint(dom, paramData)
+        }
       } else if (params.dataType === 'edge') {   // 点击连接线
 
       }
     })
+    // // 关系线 蚂蚁线           ------ 力引导图无法设置动态关系线，每次setOption都会重新渲染，图像就变了
+    // setInterval(function () {
+    //   let option = myChart.getOption()
+    //   if (option.series[0].lineStyle.dashOffset > 16) {
+    //     option.series[0].lineStyle.dashOffset = 0
+    //   } else {
+    //     option.series[0].lineStyle.dashOffset = option.series[0].lineStyle.dashOffset + 1
+    //   }
+    //   myChart.setOption(option);
+    // }, 1000);
   },
 
 
@@ -2741,7 +2797,10 @@ export default {
       return echartsData3
     } else if (data === 4) {
       return echartsData4
+    } else if (data === 5) {
+      return echartsData5
     }
+
   },
 
   getEchartsData(data) {
